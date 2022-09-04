@@ -18,10 +18,12 @@
     <div></div>
     <script>
       let a = document.querySelector("div");
+      a.style.display = "none";
       window.onmousemove = function (e) {
         let x = e.pageX;
         let y = e.pageY;
 
+        a.style.display = "block";
         a.style.top = e.pageY - a.clientHeight / 2 + "px";
         a.style.left = e.pageX - a.clientWidth / 2 + "px";
       };

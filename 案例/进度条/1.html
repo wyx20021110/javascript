@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 50px;
+        border: 1px solid black;
+      }
+      .jdt {
+        background-color: aqua;
+        height: 50px;
+        text-align: center;
+        width: 0px;
+        line-height: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="jdt"><span>0</span><span>%</span></div>
+    </div>
+    <button>安装</button>
+    <script>
+      let a = document.getElementsByClassName("jdt");
+      let btn = document.querySelector("button");
+      let span = document.querySelectorAll("span");
+      let flag = false;
+      btn.onclick = function () {
+        let num = 0;
+        if (flag === false) {
+          let timer = setInterval(() => {
+            num += 4;
+            a[0].style.width = num + "px";
+            span[0].innerHTML = Math.round((num / 400) * 100);
+            if (num >= 400) {
+              clearInterval(timer);
+            }
+            flag = true;
+          }, 100);
+        }
+      };
+    </script>
+  </body>
+</html>

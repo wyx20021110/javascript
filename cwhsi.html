@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        display: inline-block;
+        padding: 2rem;
+        background-color: aquamarine;
+      }
+      div {
+        display: none;
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <li>zwj</li>
+    <li>wjs</li>
+    <li>wyx</li>
+    <div>zwj</div>
+    <div>wjs</div>
+    <div>wyx</div>
+    <script>
+      let li = document.getElementsByTagName("li");
+      let div = document.getElementsByTagName("div");
+
+      for (var i = 0; i < li.length; i++) {
+        li[i].index = i;
+        li[i].onmouseover = function () {
+          for (var j = 0; j < li.length; j++) {
+            div[j].style.display = "none";
+          }
+          div[this.index].style.display = "block";
+        };
+      }
+    </script>
+  </body>
+</html>

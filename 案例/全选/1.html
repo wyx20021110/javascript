@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p><input type="checkbox" /> 周杰伦</p>
+    <p><input type="checkbox" />林俊杰</p>
+    <p><input type="checkbox" />薛之谦</p>
+    <button>全选</button>
+    <button>取消全选</button>
+    <script>
+      let input = document.querySelectorAll("input");
+      let btn = document.querySelectorAll("button");
+      btn[0].onclick = function () {
+        for (let i = 0; i < input.length; i++) {
+          input[i].checked = true;
+        }
+      };
+      btn[1].onclick = function () {
+        for (let i = 0; i < input.length; i++) {
+          input[i].checked = false;
+        }
+      };
+    </script>
+  </body>
+</html>

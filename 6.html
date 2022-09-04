@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="triangle"></div>
+
+    <script>
+      for (var i = 0; i < 3; i++) {
+        if (i === 0) var str = "*";
+        else str = str + "*";
+        $(".triangle").append(str + "<br>");
+      }
+    </script>
+  </body>
+</html>
